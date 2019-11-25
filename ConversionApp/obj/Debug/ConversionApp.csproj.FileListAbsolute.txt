@@ -1,0 +1,9 @@
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\bin\Debug\ConversionApp.exe.config
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\bin\Debug\ConversionApp.exe
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\bin\Debug\ConversionApp.pdb
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\obj\Debug\ConversionApp.csprojAssemblyReference.cache
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\obj\Debug\ConversionApp.Conversion.resources
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\obj\Debug\ConversionApp.Properties.Resources.resources
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\obj\Debug\ConversionApp.csproj.GenerateResource.cache
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\obj\Debug\ConversionApp.exe
+C:\Users\formation\Desktop\ConversionApp\ConversionApp\obj\Debug\ConversionApp.pdb
