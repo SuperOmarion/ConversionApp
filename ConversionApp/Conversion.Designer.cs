@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Conversion));
             this.Historique = new System.Windows.Forms.GroupBox();
-            this.ConversionHistory = new System.Windows.Forms.TextBox();
+            this.ConversionHistory = new System.Windows.Forms.ListBox();
             this.Effacer_btn = new System.Windows.Forms.Button();
             this.EuroText = new System.Windows.Forms.TextBox();
             this.FrancText = new System.Windows.Forms.TextBox();
@@ -49,28 +49,29 @@
             this.Historique.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Historique.Location = new System.Drawing.Point(12, 23);
             this.Historique.Name = "Historique";
-            this.Historique.Size = new System.Drawing.Size(241, 375);
+            this.Historique.Size = new System.Drawing.Size(241, 362);
             this.Historique.TabIndex = 1;
             this.Historique.TabStop = false;
             this.Historique.Text = "Historique";
-            this.Historique.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // ConversionHistory
             // 
-            this.ConversionHistory.Location = new System.Drawing.Point(6, 25);
-            this.ConversionHistory.Multiline = true;
+            this.ConversionHistory.FormattingEnabled = true;
+            this.ConversionHistory.ItemHeight = 18;
+            this.ConversionHistory.Location = new System.Drawing.Point(7, 23);
             this.ConversionHistory.Name = "ConversionHistory";
-            this.ConversionHistory.Size = new System.Drawing.Size(229, 339);
+            this.ConversionHistory.Size = new System.Drawing.Size(228, 328);
             this.ConversionHistory.TabIndex = 0;
             // 
             // Effacer_btn
             // 
-            this.Effacer_btn.Location = new System.Drawing.Point(66, 404);
+            this.Effacer_btn.Location = new System.Drawing.Point(66, 391);
             this.Effacer_btn.Name = "Effacer_btn";
             this.Effacer_btn.Size = new System.Drawing.Size(129, 48);
             this.Effacer_btn.TabIndex = 2;
             this.Effacer_btn.Text = "Effacer";
             this.Effacer_btn.UseVisualStyleBackColor = true;
+            this.Effacer_btn.Click += new System.EventHandler(this.Effacer_btn_Click);
             // 
             // EuroText
             // 
@@ -94,6 +95,7 @@
             this.FrancsToEuros_btn.TabIndex = 2;
             this.FrancsToEuros_btn.Text = "Francs -> Euros";
             this.FrancsToEuros_btn.UseVisualStyleBackColor = true;
+            this.FrancsToEuros_btn.Click += new System.EventHandler(this.FrancsToEuros_btn_Click);
             // 
             // EurosToFrancs_btn
             // 
@@ -103,6 +105,7 @@
             this.EurosToFrancs_btn.TabIndex = 2;
             this.EurosToFrancs_btn.Text = "Euros -> Francs";
             this.EurosToFrancs_btn.UseVisualStyleBackColor = true;
+            this.EurosToFrancs_btn.Click += new System.EventHandler(this.EurosToFrancs_btn_Click);
             // 
             // BillsPicture
             // 
@@ -110,6 +113,7 @@
             this.BillsPicture.Location = new System.Drawing.Point(408, 272);
             this.BillsPicture.Name = "BillsPicture";
             this.BillsPicture.Size = new System.Drawing.Size(249, 194);
+            this.BillsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BillsPicture.TabIndex = 4;
             this.BillsPicture.TabStop = false;
             // 
@@ -149,8 +153,8 @@
             this.Controls.Add(this.Historique);
             this.Name = "Conversion";
             this.Text = "Conversion";
+            this.Load += new System.EventHandler(this.Conversion_Load);
             this.Historique.ResumeLayout(false);
-            this.Historique.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BillsPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -159,7 +163,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox Historique;
-        private System.Windows.Forms.TextBox ConversionHistory;
         private System.Windows.Forms.Button Effacer_btn;
         private System.Windows.Forms.TextBox EuroText;
         private System.Windows.Forms.TextBox FrancText;
@@ -168,6 +171,7 @@
         private System.Windows.Forms.PictureBox BillsPicture;
         private System.Windows.Forms.Label EuroTextLabel;
         private System.Windows.Forms.Label FrancTextLabel;
+        private System.Windows.Forms.ListBox ConversionHistory;
     }
 }
 
